@@ -18,14 +18,20 @@
 .box {
   background-color: #f0f0f0;
   border-radius: 12px;
+  padding: 12px;
+}
+
+.profileImg {
+  height: 124px;
+  width: 124px;
 }
 
 .nameBox {
-  padding: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   max-width: 100px;
+  height: 100px;
 }
 
 .greetingPhrase {
@@ -34,11 +40,16 @@
   font-weight: 500;
 }
 
+.yourInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .name {
   font-size: 14px;
   line-height: 104%;
   font-weight: 600;
-  margin-bottom: 6px;
 }
 
 .role {
@@ -49,8 +60,11 @@
 }
 
 .lenguagesBox {
-  padding: 12px;
   width: 243px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .listLenguages {
@@ -63,7 +77,6 @@
   line-height: 150%;
   font-size: 14px;
   font-weight: 500;
-  margin-bottom: 16px;
 }
 
 .language {
@@ -89,4 +102,129 @@
   height: 11px;
   width: 100px;
   background-color: #28d979;
+}
+
+.educationBox {
+  padding-right: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 248px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 12px;
+  align-items: flex-start;
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  padding: 8px;
+  gap: 8px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.educationContent {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.topBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.topBarTitle {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2px;
+  margin-top: -2px;
+  color: #149063;
+  padding-left: 1px;
+}
+
+.tag {
+  font-size: 8px;
+  font-weight: 400;
+  margin-bottom: -5px;
+}
+
+.schoolName {
+  margin-top: 2px;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.favorite {
+  background-color: #28d979;
+  color: #ffffff;
+}
+
+.extraBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.interestsBox {
+  display: flex;
+  flex-direction: column;
+  max-width: 243px;
+  gap: 16px;
+}
+
+.interectsContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.interestTag {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 150%;
+  padding: 4px 10px;
+  background-color: #ffffff;
+  border-radius: 40px;
+}
+
+.contact {
+  max-width: 243px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 150%;
+  gap: 8px;
+}
+
+.link {
+  color: #dddddd;
+  text-decoration: none;
 }
