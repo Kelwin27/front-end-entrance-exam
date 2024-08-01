@@ -3,11 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <script type="module" src="/js/main.js"></script>
+    <title>CV</title>
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
+  <body class="body">
+    <main class="main">
+      <section class="profileImg">
+        <img src="/profileImg.jpg" alt="user's photo" />
+      </section>
+      <section class="box nameBox">
+        <p class="greetingPhrase">Hello 👋🏻 I’m</p>
+        <div class="yourInfo">
+          <h1 class="name">Graham Hunt</h1>
+          <p class="role">Brand/Logo Designer</p>
+        </div>
+      </section>
+      <section class="box lenguagesBox">
+        <h2 class="nameTitle">Languages</h2>
+        <div class="listLenguages">
+          <div class="nameLenguage">
+            <p class="language">English</p>
+            <p class="language">Spanish</p>
+            <p class="language">French</p>
+          </div>
+          <div class="levelLenguage">
+            <span class="level english"></span>
+            <span class="level spanish"></span>
+            <span class="level french"></span>
+          </div>
+        </div>
+      </section>
+      <section class="box educationBox">
+        <h2 class="nameTitle">Education</h2>
+        <div>
+          <div class="education"></div>
+          <div class="education"></div>
+          <div class="education"></div>
+        </div>
+      </section>
+      <section class="extraBox">
+        <div class="box interestsBox"></div>
+        <div class="contact"></div>
+      </section>
+      <section class="box toolsBox"></section>
+      <section class="box experienceBox"></section>
+    </main>
   </body>
 </html>
