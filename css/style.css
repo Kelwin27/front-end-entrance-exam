@@ -16,6 +16,12 @@
   gap: 20px;
 }
 
+.profile {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
 .box {
   background-color: #f0f0f0;
   border-radius: 12px;
@@ -96,6 +102,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 }
 
 .level {
@@ -104,18 +111,19 @@
   background-color: #28d979;
   animation: progress 2s ease-out forwards;
   border-radius: 3px;
+  width: var(--progress-value);
 }
 
 .english {
-  --progress-value: 184px;
+  --progress-value: 100%;
 }
 
 .spanish {
-  --progress-value: 144px;
+  --progress-value: 78%;
 }
 
 .french {
-  --progress-value: 123px;
+  --progress-value: 66%;
 }
 
 @keyframes progress {
@@ -135,7 +143,7 @@
   width: 248px;
 }
 
-.content {
+.educationBoxContent {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -209,7 +217,7 @@
 .interestsBox {
   display: flex;
   flex-direction: column;
-  max-width: 243px;
+  width: 243px;
   gap: 16px;
 }
 
@@ -254,7 +262,6 @@
 
 .toolsBox {
   width: 100px;
-  height: 359px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -262,8 +269,9 @@
 }
 
 .tools {
-  width: 76px;
-  align-self: center;
+  min-width: 76px;
+  margin-left: 12px;
+  margin-right: 12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -362,7 +370,7 @@
 }
 
 .experienceBox {
-  width: 387px;
+  max-width: 387px;
   padding: 12px;
   display: flex;
   flex-direction: column;
@@ -426,4 +434,72 @@
 .listItems {
   list-style-type: '\2022';
   padding-left: 4px;
+}
+
+@media (max-width: 600px) {
+  .profile {
+    width: 100%;
+    max-width: 380px;
+    justify-content: space-around;
+  }
+
+  .lenguagesBox {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .listLenguages {
+    width: 100%;
+  }
+
+  .educationBox {
+    width: auto;
+  }
+
+  .interestsBox {
+    width: auto;
+    max-width: 379px;
+  }
+
+  .extraBox {
+    gap: 20px;
+    align-items: center;
+  }
+
+  .contact {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .toolsBox {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .tools {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .toolsContent {
+    width: 58px;
+  }
+}
+
+@media (max-width: 355px) {
+  .toolsContent {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+}
+
+@media (max-width: 307px) {
+  .educationBoxContent {
+    justify-content: center;
+  }
+
+  .education {
+    width: 100%;
+  }
 }
