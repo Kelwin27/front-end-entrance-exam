@@ -228,3 +228,111 @@
   color: #dddddd;
   text-decoration: none;
 }
+
+.toolsBox {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tools {
+  width: 76px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.toolsContent {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  padding: 11px;
+  flex-wrap: wrap;
+  gap: 16px;
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  content: '';
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 5px;
+  font-weight: 500;
+  line-height: 142%;
+  padding: 2px 6px;
+  border-radius: 59px;
+  left: 50%;
+  top: 0px;
+  transform: translateX(-50%) translateY(-50%);
+  white-space: nowrap;
+}
+
+.experienceBox {
+  width: 387px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.jobList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.experiance {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #ffffff;
+}
+
+.favoriteExperiance {
+  color: #ffffff;
+  background-color: #28d979;
+}
+
+.experienceTopBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mostRecent {
+  color: #ddf163;
+  line-height: 155%;
+  padding: 2px 6px;
+  background-color: #7d721266;
+  border-radius: 59px;
+}
+
+.roleName {
+  font-size: 10px;
+  width: 124px;
+}
+
+.aboutJob {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.experianceContent {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.listItems {
+  list-style-type: '\2022';
+  padding-left: 4px;
+}
