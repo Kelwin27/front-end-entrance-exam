@@ -3,7 +3,7 @@
 .body {
   font-family: 'Poppins', sans-serif;
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   padding: 15px 20px;
 }
 
@@ -255,7 +255,7 @@
   gap: 8px;
 }
 
-.link {
+.contactLink {
   color: #dddddd;
   text-decoration: none;
 }
@@ -287,70 +287,97 @@
   position: relative;
 }
 
+.link {
+  display: block;
+  width: 120%;
+  height: 120%;
+}
+
+.tool {
+  transition: all 0.5s ease-in-out;
+}
+
+.tool:hover {
+  scale: 1.2;
+}
+
 .figma {
   margin-left: 5px;
   width: 10px;
   height: 15px;
+  background-image: url('/links/logoFigma.png');
 }
 
 .cloud {
   width: 18px;
   height: 18px;
+  background-image: url('/links/logoCreativeCloud.png');
 }
 
 .miro {
   width: 21px;
   height: 20px;
+  background-image: url('/links/logoMiro.png');
 }
 
 .notion {
   width: 17px;
+  background-image: url('/links/logoNotion.png');
 }
 
 .meet {
   width: 19.5px;
   height: 15.95px;
+  background-image: url('/links/logoMeet.png');
 }
 
 .analytics {
   width: 18.5px;
   height: 18px;
+  background-image: url('/links/logoanalytics.png');
 }
 
 .zapier {
   width: 20px;
   height: 20px;
+  background-image: url('/links/logoZapìer.png');
 }
 
 .webflow {
   width: 18px;
   height: 18px;
+  background-image: url('/links/logoWebflow.png');
 }
 
 .framer {
   width: 13px;
   height: 18.57px;
   margin-left: 4px;
+  background-image: url('/links/logoFramer.png');
 }
 
 .wordpress {
   width: 17px;
   height: 17px;
+  background-image: url('/links/logoWordpress.png');
 }
 
 .chat {
   width: 19px;
   height: 19px;
+  background-image: url('/links/logoChatGPT.png');
 }
 
 .copilot {
   width: 18px;
   height: 19px;
+  background-image: url('/links/logoCopilot.png');
 }
 
 .midjourney {
   width: 19px;
   height: 19px;
+  background-image: url('/links/logoMidjourney.png');
 }
 
 .label {
