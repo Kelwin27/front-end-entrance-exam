@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -100,8 +101,30 @@
 .level {
   display: block;
   height: 11px;
-  width: 100px;
   background-color: #28d979;
+  animation: progress 2s ease-out forwards;
+  border-radius: 3px;
+}
+
+.english {
+  --progress-value: 184px;
+}
+
+.spanish {
+  --progress-value: 144px;
+}
+
+.french {
+  --progress-value: 123px;
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress-value);
+  }
 }
 
 .educationBox {
@@ -231,9 +254,11 @@
 
 .toolsBox {
   width: 100px;
+  height: 359px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding-bottom: 0;
 }
 
 .tools {
@@ -248,10 +273,76 @@
   background-color: #ffffff;
   display: flex;
   flex-direction: row;
-  padding: 11px;
+  padding: 16px 11px;
   flex-wrap: wrap;
   gap: 16px;
   position: relative;
+}
+
+.figma {
+  margin-left: 5px;
+  width: 10px;
+  height: 15px;
+}
+
+.cloud {
+  width: 18px;
+  height: 18px;
+}
+
+.miro {
+  width: 21px;
+  height: 20px;
+}
+
+.notion {
+  width: 17px;
+}
+
+.meet {
+  width: 19.5px;
+  height: 15.95px;
+}
+
+.analytics {
+  width: 18.5px;
+  height: 18px;
+}
+
+.zapier {
+  width: 20px;
+  height: 20px;
+}
+
+.webflow {
+  width: 18px;
+  height: 18px;
+}
+
+.framer {
+  width: 13px;
+  height: 18.57px;
+  margin-left: 4px;
+}
+
+.wordpress {
+  width: 17px;
+  height: 17px;
+}
+
+.chat {
+  width: 19px;
+  height: 19px;
+}
+
+.copilot {
+  width: 18px;
+  height: 19px;
+}
+
+.midjourney {
+  width: 19px;
+  height: 19px;
 }
 
 .label {
