@@ -634,6 +634,13 @@ img {
   }
 }
 
+@media (max-width: 440px) {
+  .contact {
+    width: auto;
+    padding: 12px 22px;
+  }
+}
+
 @media (max-width: 355px) {
   .tools {
     flex-direction: column;
