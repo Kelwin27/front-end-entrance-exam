@@ -1,5 +1,19 @@
 @import './reset.css';
 
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
 img {
   object-fit: cover;
   overflow: hidden;
@@ -60,6 +74,43 @@ img {
   display: flex;
   flex-direction: row;
   gap: 20px;
+  position: relative;
+}
+
+.printBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: '';
+  font-size: 8px;
+  font-weight: 500;
+  padding: 4px 6px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+  box-shadow:
+    0px 2px 4px rgba(0, 0, 0, 0.2),
+    0px 4px 8px rgba(0, 0, 0, 0.2),
+    0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.printBtn:hover {
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.2),
+    0px 8px 16px rgba(0, 0, 0, 0.2),
+    0px 16px 32px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.printBtn:active {
+  box-shadow:
+    0px 2px 4px rgba(0, 0, 0, 0.2),
+    0px 4px 8px rgba(0, 0, 0, 0.2),
+    0px 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
 }
 
 .box {
@@ -597,5 +648,18 @@ img {
 
   .education {
     width: 100%;
+  }
+}
+
+@media print {
+  .printBtn {
+    display: none;
+  }
+
+  .main {
+    padding: 0;
+    border: none;
+    width: 100%;
+    margin: 0;
   }
 }

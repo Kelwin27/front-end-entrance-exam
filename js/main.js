@@ -1,8 +1,6 @@
 import '../css/style.css';
-import '@fontsource/poppins';
-import '@fontsource/poppins/500.css';
 
-document.body.addEventListener('click', function (event) {
+document.body.addEventListener('click', (event) => {
   const currentEditable = document.querySelector('[contenteditable="true"]');
   if (currentEditable && currentEditable !== event.target) {
     currentEditable.removeAttribute('contenteditable');
@@ -21,7 +19,17 @@ document.body.addEventListener('click', function (event) {
   }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
+  const main = document.querySelector('.main');
+  document.addEventListener('click', (event) => {
+    const button = document.querySelector('.printBtn');
+    if (event.target === button) {
+      addRippleEffect(event, () => {
+        window.print();
+      });
+    }
+  });
+
   document.querySelectorAll('.edit').forEach(function (editable) {
     const id = `${editable.className} ${editable.dataset.indexNumber ?? ''}`;
     const savedContent = localStorage.getItem(id);
@@ -38,7 +46,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function addRippleEffect(event, callback) {
   const target = event.target;
-  if (!target.classList.contains('edit')) return;
+  if (
+    !target.classList.contains('edit') &&
+    !target.classList.contains('printBtn')
+  )
+    return;
 
   const ripple = document.createElement('span');
   const rect = target.getBoundingClientRect();
@@ -50,6 +62,8 @@ function addRippleEffect(event, callback) {
   ripple.style.left = `${x}px`;
   ripple.style.top = `${y}px`;
   ripple.classList.add('ripple');
+
+  console.log(ripple);
 
   target.appendChild(ripple);
 
