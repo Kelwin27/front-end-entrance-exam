@@ -6,8 +6,9 @@ document.body.addEventListener('click', function (event) {
   const currentEditable = document.querySelector('[contenteditable="true"]');
   if (currentEditable && currentEditable !== event.target) {
     currentEditable.removeAttribute('contenteditable');
+    const index = currentEditable.dataset.indexNumber;
     localStorage.setItem(
-      currentEditable.className,
+      `${currentEditable.className} ${index ?? ''}`,
       currentEditable.textContent
     );
   }
@@ -22,9 +23,15 @@ document.body.addEventListener('click', function (event) {
 
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.edit').forEach(function (editable) {
-    const savedContent = localStorage.getItem(editable.className);
-    if (savedContent) {
+    const id = `${editable.className} ${editable.dataset.indexNumber ?? ''}`;
+    const savedContent = localStorage.getItem(id);
+    if (!savedContent) {
+      return;
+    }
+    if (savedContent !== editable.textContent) {
       editable.textContent = savedContent;
+    } else {
+      localStorage.removeItem(id);
     }
   });
 });

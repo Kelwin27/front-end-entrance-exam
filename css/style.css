@@ -25,13 +25,27 @@ img {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+.edit:hover {
+  color: #eb561b;
+}
+
+.edit[contenteditable='true'] {
+  background-color: #8ae68a;
+  color: #ffffff;
+  padding: 2px 4px;
+  border-radius: 7px;
 }
 
 .ripple {
   position: absolute;
   border-radius: 50%;
   transform: scale(0);
-  background: rgba(255, 255, 255, 0.6);
+  background: #ffffff9a;
   animation: ripple-animation 0.6s linear;
 }
 
@@ -213,6 +227,8 @@ img {
   width: 11px;
   height: 9.4px;
   overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .heartWhite {
@@ -221,6 +237,10 @@ img {
   width: 11px;
   height: 9.4px;
   overflow: hidden;
+}
+
+.heartGreen:hover {
+  scale: 1.2;
 }
 
 .tags {
@@ -236,11 +256,12 @@ img {
 .tag {
   font-size: 8px;
   font-weight: 400;
-  margin-bottom: -5px;
+  line-height: 150%;
 }
 
 .schoolName {
-  margin-top: 2px;
+  margin-top: 1px;
+  margin-bottom: -1px;
   font-size: 8px;
   font-weight: 400;
   line-height: 150%;
@@ -327,6 +348,9 @@ img {
   padding: 16px 11px;
   flex-wrap: wrap;
   gap: 16px;
+}
+
+.toolsContentBox {
   position: relative;
 }
 
@@ -490,9 +514,11 @@ img {
 }
 
 .aboutJob {
-  display: flex;
-  flex-direction: row;
-  gap: 6px;
+  word-spacing: 4px;
+}
+
+.job {
+  word-spacing: 0;
 }
 
 .experianceContent {
