@@ -440,6 +440,7 @@ img {
 
 .notion {
   width: 17px;
+  height: 20px;
   background-image: url('/links/logoNotion.png');
 }
 
@@ -634,9 +635,20 @@ img {
 }
 
 @media (max-width: 355px) {
-  .toolsContent {
+  .tools {
     flex-direction: column;
+  }
+
+  .roleName {
+    width: auto;
+    min-width: 80px;
+    margin-bottom: 8px;
+  }
+
+  .toolsContent {
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     width: auto;
   }
 }
