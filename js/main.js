@@ -1,3 +1,4 @@
+import html2pdf from 'html2pdf.js';
 import '../css/style.css';
 
 document.body.addEventListener('click', (event) => {
@@ -25,7 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const button = document.querySelector('.printBtn');
     if (event.target === button) {
       addRippleEffect(event, () => {
-        window.print();
+        const element = document.querySelector('.main');
+
+        const opt = {
+          margin: 1,
+          filename: 'CV.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2 },
+          jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+        };
+
+        html2pdf().set(opt).from(element).save();
       });
     }
   });
@@ -62,8 +73,6 @@ function addRippleEffect(event, callback) {
   ripple.style.left = `${x}px`;
   ripple.style.top = `${y}px`;
   ripple.classList.add('ripple');
-
-  console.log(ripple);
 
   target.appendChild(ripple);
 
